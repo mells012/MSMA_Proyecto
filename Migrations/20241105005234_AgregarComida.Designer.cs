@@ -3,6 +3,7 @@ using MSMA_Proyecto.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MSMA_Proyecto.Migrations
 {
     [DbContext(typeof(MSMA_ProyectoContext))]
-    partial class MSMA_ProyectoContextModelSnapshot : ModelSnapshot
+    [Migration("20241105005234_AgregarComida")]
+    partial class AgregarComida
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -44,28 +47,6 @@ namespace MSMA_Proyecto.Migrations
                     b.HasKey("IDCerveza");
 
                     b.ToTable("Cervezas");
-                });
-
-            modelBuilder.Entity("MSMA_Proyecto.Models.Cocteles", b =>
-                {
-                    b.Property<int>("IDCocteles")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IDCocteles"));
-
-                    b.Property<int>("Coctel")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Descripción")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<double>("Precio_Coctel")
-                        .HasColumnType("float");
-
-                    b.HasKey("IDCocteles");
-
-                    b.ToTable("Cocteles");
                 });
 
             modelBuilder.Entity("MSMA_Proyecto.Models.Comida", b =>

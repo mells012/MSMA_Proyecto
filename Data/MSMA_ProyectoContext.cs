@@ -15,5 +15,7 @@ namespace MSMA_Proyecto.Data
         }
 
         public DbSet<MSMA_Proyecto.Models.Cervezas> Cervezas { get; set; } = default!;
+        public DbSet<MSMA_Proyecto.Models.Comida> Comida { get; set; } = default!;
+        public DbSet<MSMA_Proyecto.Models.Cocteles> Cocteles { get; set; } = default!;
     }
 }

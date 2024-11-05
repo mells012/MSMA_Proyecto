@@ -3,6 +3,7 @@ using MSMA_Proyecto.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MSMA_Proyecto.Migrations
 {
     [DbContext(typeof(MSMA_ProyectoContext))]
-    partial class MSMA_ProyectoContextModelSnapshot : ModelSnapshot
+    [Migration("20241105011123_AgregarCocteles")]
+    partial class AgregarCocteles
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

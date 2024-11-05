@@ -5,7 +5,7 @@ namespace MSMA_Proyecto.Models
 {
     public class Cervezas
     {
-        [Key] // Asegúrate de marcar la propiedad como clave primaria
+        [Key] 
         public int IDCerveza { get; set; }
         public string? Nombre { get; set; }
         public enum TamañoOpciones { Copa, Pinta, Litro }
